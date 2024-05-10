@@ -482,12 +482,12 @@ class MainWindow(QtWidgets.QMainWindow):
             enabled=False,
         )
 
-        help = action(
-            self.tr("&Tutorial"),
-            self.tutorial,
-            icon="help",
-            tip=self.tr("Show tutorial page"),
-        )
+        # help = action(
+        #     self.tr("&Tutorial"),
+        #     self.tutorial,
+        #     icon="help",
+        #     tip=self.tr("Show tutorial page"),
+        # )
 
         zoom = QtWidgets.QWidgetAction(self)
         zoomBoxLayout = QtWidgets.QVBoxLayout()
@@ -713,7 +713,7 @@ class MainWindow(QtWidgets.QMainWindow):
             file=self.menu(self.tr("&File")),
             edit=self.menu(self.tr("&Edit")),
             view=self.menu(self.tr("&View")),
-            help=self.menu(self.tr("&Help")),
+            # help=self.menu(self.tr("&Help")),
             recentFiles=QtWidgets.QMenu(self.tr("Open &Recent")),
             labelList=labelMenu,
         )
@@ -737,7 +737,7 @@ class MainWindow(QtWidgets.QMainWindow):
                 quit,
             ),
         )
-        utils.addActions(self.menus.help, (help,))
+        # utils.addActions(self.menus.help, (help,))
         utils.addActions(
             self.menus.view,
             (
